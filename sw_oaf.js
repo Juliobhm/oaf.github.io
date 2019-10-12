@@ -1,4 +1,4 @@
-var MiCache = "MiCache_v1";
+/* var MiCache = "MiCache_v1";
 var archivos = [
   "index.html",
   "css/estilos.css",
@@ -34,7 +34,7 @@ var archivos = [
             )
         })
     .then(self.clients.claim())); //this line is important in some contexts
-});
+}); */
 
   self.addEventListener("install", function(event) {
     event.waitUntil(

@@ -4,7 +4,7 @@ console.log('Se ha abierto app.js');
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('sw_oaf.js').then(function(registration) {
+      navigator.serviceWorker.register('./sw_oaf.js').then(function(registration) {
         // Registration was successful
         console.log('ServiceWorker registrado correctamente, ', registration);
       }, function(err) {
