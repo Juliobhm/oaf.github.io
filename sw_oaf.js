@@ -1,9 +1,10 @@
-/* var MiCache = "MiCache_v1";
+var MiCache = "MiCache_v1";
 var archivos = [
   "index.html",
   "css/estilos.css",
-  "css/app.js",
+  "java/app.js",
   "sw_oaf.js",
+  "java/programacion.js",
   "images/icons/icon-72x72.png",
   "images/icons/icon-96x96.png",
   "images/icons/icon-128x128.png",
@@ -55,4 +56,4 @@ var archivos = [
         return(cacheRespuesta) || fetch(evento.request);
         })
        );
-      }); */
+      });
