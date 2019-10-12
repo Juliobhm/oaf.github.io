@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="java/programacion.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+       
+    <div class="contenedor">
+        <div class="a">
+           <p class="rotulo">Oxigenoterapia de Alto Flujo</p>
+        </div>
+
+        <div class="b">
+            <p class="rotulo">Cálculo de Parámetros</p>
+        </div>
+
+        <div class="c">
+            <input type="radio" name="parametro" id="litrosAire" value="litrosAire">
+            <label for="litrosAire">Litros de Aire</label>
+        </div>
+        <div class="d">
+            <span class="etiquetas" id="litrosAireValor">0.1</span>
+            
+        </div>
+        <div class="e">
+            <input type="radio" name="parametro" id="litrosOxigeno" value="litrosOxigeno">
+            <label for="litrosOxigeno">Litros de Oxígeno</label>
+        </div>
+        <div class="f">
+            <span class="etiquetas" id="litrosOxigenoValor">0.1</span>
+        </div>
+        <div class="g">
+            <input type="radio" name="parametro" id="flujo" value="flujo">
+            <label for="flujo">Flujo</label>
+        </div>
+        <div class="h">
+            <span class="etiquetas" id="flujoValor">0</span>
+        </div>
+        <div class="i">
+            <input type="radio" name="parametro" id="fio2" value="fio2">
+            <label for="fio2">FiO<sub>2</sub> </label>
+        </div>
+        <div class="j">
+            <span class="etiquetas" id="fio2Valor">0</span>
+        </div>
+        <div class="k">
+            <input class="rango" id="rango" type="range" name="" value="0" min="0" max="100" oninput="actualizarRango(this.value)"  onchange="actualizarRango(this.value)"  onmousemove="actualizarRango(this.value)">
+        </div>
+    
+    </div>
+</body>
+</html>
