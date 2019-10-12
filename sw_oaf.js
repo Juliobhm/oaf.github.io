@@ -1,4 +1,4 @@
-var MiCache = "MiCache_v1";
+/* var MiCache = "MiCache_v1";
 var archivos = [
   "index.html",
   "css/estilos.css",
@@ -55,4 +55,4 @@ var archivos = [
         return(cacheRespuesta) || fetch(evento.request);
         })
        );
-      });
+      }); */
