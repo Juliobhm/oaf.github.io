@@ -1,12 +1,15 @@
 {
-    "name": "Tercera App",
-    "short_name": "3_App",
+    "name": "Oxigenoterapia de Alto Flujo",
+    "short_name": "OAF",
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
     "display": "standalone",
     "orientation": "portrait",
     "Scope": "/",
-    "start_url": "https://juliobhm.github.io/quintapagina.github.io/index.html",
+
+    "start_url": "https://juliobhm.github.io/oaf.github.io/index.html",
+    
+   
     "icons": [
       {
         "src": "images/icons/icon-72x72.png",

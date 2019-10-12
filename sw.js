@@ -1,9 +1,9 @@
 var MiCache = "MiCache_v1";
 var archivos = [
   "index.html",
-  "estilos.css",
-  "app.js",
-  "sw02.js",
+  "css/estilos.css",
+  "css/app.js",
+  "sw.js",
   "images/icons/icon-72x72.png",
   "images/icons/icon-96x96.png",
   "images/icons/icon-128x128.png",
@@ -13,7 +13,7 @@ var archivos = [
   "images/icons/icon-384x384.png",
   "images/icons/icon-512x512.png",
   "manifest.json"
-  // "https://fonts/googleapis.com/icon?family=Material+icons"
+  
 ];
 
 
