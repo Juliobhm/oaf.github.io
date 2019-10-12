@@ -3,7 +3,7 @@ var archivos = [
   "index.html",
   "css/estilos.css",
   "css/app.js",
-  "sw.js",
+  "sw_oaf.js",
   "images/icons/icon-72x72.png",
   "images/icons/icon-96x96.png",
   "images/icons/icon-128x128.png",
