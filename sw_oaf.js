@@ -16,7 +16,7 @@ var archivos = [
   
 ];
 
-/* 
+
 //Borrar caches diferentes al actual
   self.addEventListener('activate', function(event){
     event.waitUntil(
@@ -34,7 +34,7 @@ var archivos = [
             )
         })
     .then(self.clients.claim())); //this line is important in some contexts
-}); */
+});
 
   self.addEventListener("install", function(event) {
     event.waitUntil(
