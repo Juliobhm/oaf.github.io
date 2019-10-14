@@ -123,18 +123,19 @@ body{
     } */
     .rango{
         -webkit-appearance: none;
-        height: 25px;
+        height: 35px;
         background: rgb(155, 136, 135);
         outline: none;
         border-radius: 15px;
         overflow: hidden;
+        transition: 0.6s;
     
     }
     
     .rango::-webkit-slider-thumb{
         -webkit-appearance: none;
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         background: #FF4136;
         cursor: pointer;

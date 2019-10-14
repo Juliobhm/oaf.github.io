@@ -13,10 +13,25 @@ var fio2  = document.getElementById('fio2Valor');
 function escucha(){
     document.getElementById('litrosAireValor').innerHTML = Math.round(litrosAire);
     document.getElementById('litrosOxigenoValor').innerHTML = Math.round(litrosOxigeno);
+    
+    for (i=0; i<4; i++){
+    if (parametro[i].checked == false) {
+       console.log('parametro unchecked');
+  
+        rango = document.getElementById('rango');
+    
+        for (i=0; i<21; i++){
+            document.getElementById('rango').stepDown();
+        }
+        
+     }
+     rango.style.display = 'none';
+    }
 
     for (i=0; i<4; i++){
       parametro[i].addEventListener('input', parametroSeleccionado);
     }
+   
     rango=document.getElementById('rango');
     rango.addEventListener('input', actualizarRango);
 
@@ -24,9 +39,9 @@ function escucha(){
 }
 function parametroSeleccionado(){
   
-    
+  
     for (i=0; i<4; i++){
-      
+        rango.style.display = '';
         etiqueta[i].style.color= "black";
         etiqueta[i].style.backgroundColor = "white";
         
@@ -34,6 +49,7 @@ function parametroSeleccionado(){
         if (parametro[i].checked == true) {
             parametroNumero = i;
          }
+       
     }
 
         if (parametroNumero ==0){
@@ -42,16 +58,16 @@ function parametroSeleccionado(){
             rango.min = '0';
 
         }
-        if (parametroNumero ==1){
+        else if (parametroNumero ==1){
             parametroCampo = document.getElementById('litrosOxigenoValor');;
             rango.max = '50';
             rango.min = '0';
         }
-        if (parametroNumero ==2){
+        else if (parametroNumero ==2){
             parametroCampo = document.getElementById('flujoValor');
             rango.max = '60';
         }
-        if (parametroNumero ==3){
+        else if (parametroNumero ==3){
             parametroCampo = document.getElementById('fio2Valor');
             rango.min = '21';
             rango.max = '100';
