@@ -4,7 +4,7 @@ var parametro = document.getElementsByName('parametro');
 var parametroNumero;
 var parametroCampo;
 var  etiqueta = document.getElementsByClassName('etiquetas');
-var rango = document.getElementById('rango');
+var rango = Math.round(document.getElementById('rango'));
 var litrosAire = document.getElementById('litrosAireValor');
 var litrosOxigeno  = document.getElementById('litrosOxigenoValor');
 var flujo  = document.getElementById('flujoValor');
@@ -33,23 +33,19 @@ function parametroSeleccionado(){
 
         if (parametro[i].checked == true) {
             parametroNumero = i;
-          
-
-        }
+         }
     }
 
         if (parametroNumero ==0){
             parametroCampo = document.getElementById('litrosAireValor');
-            // document.getElementById("rango").max = '50';
             rango.max = '50';
-   
-
-           
+            rango.min = '0';
 
         }
         if (parametroNumero ==1){
             parametroCampo = document.getElementById('litrosOxigenoValor');;
             rango.max = '50';
+            rango.min = '0';
         }
         if (parametroNumero ==2){
             parametroCampo = document.getElementById('flujoValor');
@@ -70,7 +66,7 @@ function parametroSeleccionado(){
     console.log("parametroNumero: ", parametroNumero, "valor: ", valor, "rango: ", rango.value, "diferenica: ", diferencia)
 
    
-    if (diferencia > 0) {
+    if (diferencia >= 0) {
         for (i=0; i<diferencia; i++){
         document.getElementById('rango').stepUp();
        
@@ -83,7 +79,6 @@ function parametroSeleccionado(){
     }
 
 }
-
    
 function actualizarRango(){
    // var parametro = document.getElementsByName('parametro');
@@ -113,8 +108,8 @@ function actualizarRango(){
         flujo.innerHTML=Math.round((litrosAireV + litrosOxigenoV));
         var fio2calculada = Math.round((litrosAireV * 21 + litrosOxigenoV * 100) / (litrosAireV + litrosOxigenoV));
         console.log('fio2 calculada: ', fio2calculada);
-        if (isNaN(fio2calculada)){
-            document.getElementById('fio2Valor').innerHTML = "0"}
+        if (isNaN(fio2calculada)) {
+            document.getElementById('fio2Valor').innerHTML = "21"}
         else{document.getElementById('fio2Valor').innerHTML = fio2calculada};
 
        /*  fio2.innerHTML= Math.round((litrosAireV * 21 + litrosOxigenoV * 100) / (litrosAireV + litrosOxigenoV)); */
@@ -126,7 +121,7 @@ function actualizarRango(){
         var fio2calculada = Math.round((litrosAireV * 21 + litrosOxigenoV * 100) / (litrosAireV + litrosOxigenoV));
         console.log('fio2 calculada: ', fio2calculada);
         if (isNaN(fio2calculada)){
-            document.getElementById('fio2Valor').innerHTML = "0"}
+            document.getElementById('fio2Valor').innerHTML = "21"}
         else{document.getElementById('fio2Valor').innerHTML = fio2calculada};
         
         /* fio2.innerHTML= Math.round((litrosAireV * 21 + litrosOxigenoV * 100) / (litrosAireV + litrosOxigenoV)); */
